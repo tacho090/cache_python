@@ -1,4 +1,5 @@
 import unittest
+from cache.cache import Cache
 
 class TestCache(unittest.TestCase):
     def test_cache_get(self):

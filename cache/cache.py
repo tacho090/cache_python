@@ -1,10 +1,11 @@
-import log
+from cache_log.log import MyLogger
 
 class Cache:
     def __init__(self, max_size):
         self.max_size = max_size
         self.cache = {}
-        self.logger = logging.getLogger(__name__)
+        self.logger = MyLogger('main_logger', 'main_logger.log')
+        self.logger.info("Start logger instance")
 
     def get(self, key):
         if key in self.cache:
@@ -30,7 +31,7 @@ class Cache:
 
 if __name__ == '__main__':
     # Example usage
-    cache = Cache(max_size=3)
+    cache = Cache(3)
     cache.set(1, "data1")
     cache.set(2, "data2")
     cache.set(3, "data3")

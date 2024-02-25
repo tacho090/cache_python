@@ -1,0 +1,10 @@
+2024-02-24 18:04:15,168 - main_logger - INFO - Start logger instance
+2024-02-24 18:04:15,168 - main_logger - INFO - Added key '1' to cache.
+2024-02-24 18:04:15,169 - main_logger - INFO - Added key '2' to cache.
+2024-02-24 18:04:15,169 - main_logger - INFO - Added key '3' to cache.
+2024-02-24 18:04:15,169 - main_logger - INFO - Get key '1' from cache
+2024-02-24 18:04:15,169 - main_logger - INFO - Get key '2' from cache
+2024-02-24 18:04:15,169 - main_logger - INFO - Get key '3' from cache
+2024-02-24 18:04:15,169 - main_logger - INFO - Recycled memory by removing key '1' from cache
+2024-02-24 18:04:15,169 - main_logger - INFO - Added key '4' to cache.
+2024-02-24 18:04:15,169 - main_logger - WARNING - Key '1' not found in cache

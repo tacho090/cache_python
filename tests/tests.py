@@ -1,5 +1,10 @@
 import unittest
 from cache.cache import Cache
+from log.log import MyLogger
+
+logger = MyLogger('other_logger', 'other_logger.log')
+logger.debug("This is a test message")
+
 
 class TestCache(unittest.TestCase):
     def test_cache_get(self):

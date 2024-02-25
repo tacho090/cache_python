@@ -42,13 +42,12 @@ class MyLogger:
             self.logger.addHandler(fh)
 
 
-# Example usage:
-logger_name = 'example_logger'
-log_filename = 'critical.log'
-filemode = 'w'
-level = logging.CRITICAL
-
 if __name__ == "__main__":
+    # Example usage:
+    logger_name = 'example_logger'
+    log_filename = 'critical.log'
+    filemode = 'w'
+    level = logging.CRITICAL
     logger = MyLogger(logger_name, log_filename, filemode, level)
 
     logger.debug("This is a debug message")

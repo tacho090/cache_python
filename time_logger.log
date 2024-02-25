@@ -1,0 +1,10 @@
+2024-02-24 19:12:35,858 - time_logger - INFO - Start time logger
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of set: 8.20159912109375e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of get: 3.3855438232421875e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of set: 2.0265579223632812e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of get: 3.123283386230469e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of set: 1.7881393432617188e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of get: 2.765655517578125e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of recycle_memory: 2.002716064453125e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of set: 5.078315734863281e-05 seconds
+2024-02-24 19:12:35,858 - time_logger - INFO - Execution time of get: 1.5020370483398438e-05 seconds

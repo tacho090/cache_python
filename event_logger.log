@@ -1,13 +1,13 @@
-2024-02-24 19:12:35,858 - event_logger - INFO - Start event logger
-2024-02-24 19:12:35,858 - event_logger - INFO - Added key '0' to cache.
-2024-02-24 19:12:35,858 - event_logger - INFO - Get key '0' from cache
-2024-02-24 19:12:35,858 - event_logger - INFO - {'date_added': 13778.980002596, 'value': 'data0'}
-2024-02-24 19:12:35,858 - event_logger - INFO - Added key '1' to cache.
-2024-02-24 19:12:35,858 - event_logger - INFO - Get key '1' from cache
-2024-02-24 19:12:35,858 - event_logger - INFO - {'date_added': 13778.980162312, 'value': 'data1'}
-2024-02-24 19:12:35,858 - event_logger - INFO - Added key '2' to cache.
-2024-02-24 19:12:35,858 - event_logger - INFO - Get key '2' from cache
-2024-02-24 19:12:35,858 - event_logger - INFO - {'date_added': 13778.980247908, 'value': 'data2'}
-2024-02-24 19:12:35,858 - event_logger - INFO - Recycled memory by removing key '0' from cache
-2024-02-24 19:12:35,858 - event_logger - INFO - Added key '4' to cache.
-2024-02-24 19:12:35,858 - event_logger - WARNING - Key '0' not found in cache
+2024-02-24 19:25:01,503 - event_logger - INFO - Start event logger
+2024-02-24 19:25:01,503 - event_logger - INFO - Added key '0' to cache.
+2024-02-24 19:25:01,503 - event_logger - INFO - Get key '0' from cache
+2024-02-24 19:25:01,503 - event_logger - INFO - {'date_added': 14524.625197578, 'value': 'data0'}
+2024-02-24 19:25:01,503 - event_logger - INFO - Added key '1' to cache.
+2024-02-24 19:25:01,503 - event_logger - INFO - Get key '1' from cache
+2024-02-24 19:25:01,503 - event_logger - INFO - {'date_added': 14524.625357111, 'value': 'data1'}
+2024-02-24 19:25:01,504 - event_logger - INFO - Added key '2' to cache.
+2024-02-24 19:25:01,504 - event_logger - INFO - Get key '2' from cache
+2024-02-24 19:25:01,504 - event_logger - INFO - {'date_added': 14524.625433511, 'value': 'data2'}
+2024-02-24 19:25:01,504 - event_logger - INFO - Recycled memory by removing key '0' from cache
+2024-02-24 19:25:01,504 - event_logger - INFO - Added key '4' to cache.
+2024-02-24 19:25:01,504 - event_logger - WARNING - Key '0' not found in cache

@@ -1,7 +1,6 @@
 from cache_log.log import MyLogger
-import re
 import time
-from functools import wraps
+from helpers import measure_time, re_eval
 
 class Cache:
     def __init__(self, max_size):
@@ -12,19 +11,6 @@ class Cache:
         self.event_logger.info("Start event logger")
         self.time_logger.info("Start time logger")
 
-    # Decorator to measure execution time
-    def measure_time(func):
-        @wraps(func)
-        def wrapper(self, *args, **kwargs):
-            start_time = time.time()
-            result = func(self, *args, **kwargs)
-            end_time = time.time()
-            elapsed_time = end_time - start_time
-            self.time_logger.info(
-                f"Execution time of {func.__name__}: {elapsed_time} seconds"
-            )
-            return result
-        return wrapper
 
     @measure_time
     def get(self, key):
@@ -38,7 +24,7 @@ class Cache:
 
     @measure_time
     def set(self, key, value):
-        if self.re_eval(value):
+        if re_eval(value):
             if len(self.cache) >= self.max_size:
                 self.recycle_memory()
             self.cache[key] = value
@@ -52,12 +38,6 @@ class Cache:
         del self.cache[oldest_key]
         self.event_logger.info(f"Recycled memory by removing key '{oldest_key}' from cache")
         print(self.cache)
-
-    def re_eval(self, value):
-        pattern = r'^[a-zA-Z0-9]+$'
-        print(value)
-        return re.match(pattern, value["value"])        
-
 
 
 if __name__ == '__main__':

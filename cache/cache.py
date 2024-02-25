@@ -1,6 +1,7 @@
 from cache_log.log import MyLogger
 import time
-from helpers import measure_time, re_eval
+from helpers import measure_time, measure_memory, MEMORY_THRESHOLD_MB, re_eval
+
 
 class Cache:
     def __init__(self, max_size):
@@ -8,11 +9,15 @@ class Cache:
         self.cache = {}
         self.event_logger = MyLogger('event_logger', 'event_logger.log')
         self.time_logger = MyLogger('time_logger', 'time_logger.log')
+        self.memory_logger = MyLogger('memory_logger', 'memory_logger.log')
+        self.memory_logger.info("Start memory logger")
+        self.memory_logger.info(f"70% of total available memory in MB: {MEMORY_THRESHOLD_MB}")
         self.event_logger.info("Start event logger")
         self.time_logger.info("Start time logger")
 
 
     @measure_time
+    @measure_memory
     def get(self, key):
         if key in self.cache:
             self.event_logger.info(f"Get key '{key}' from cache")

@@ -1,4 +1,5 @@
 from cache_log.log import MyLogger
+import re
 
 class Cache:
     def __init__(self, max_size):
@@ -16,10 +17,11 @@ class Cache:
             return None
 
     def set(self, key, value):
-        if len(self.cache) >= self.max_size:
-            self.recycle_memory()
-        self.cache[key] = value
-        self.logger.info(f"Added key '{key}' to cache.")
+        if self.regex_eval(value):
+            if len(self.cache) >= self.max_size:
+                self.recycle_memory()
+            self.cache[key] = value
+            self.logger.info(f"Added key '{key}' to cache.")
 
     def recycle_memory(self):
         # Implement your memory recycling strategy here
@@ -28,11 +30,17 @@ class Cache:
         del self.cache[oldest_key]
         self.logger.info(f"Recycled memory by removing key '{oldest_key}' from cache")
 
+    def regex_eval(self, value):
+        pattern = r'^[a-zA-Z0-9]+$'
+        return re.match(pattern, value)
+        
+
+
 
 if __name__ == '__main__':
     # Example usage
     cache = Cache(3)
-    cache.set(1, "data1")
+    cache.set(1, "data1!")
     cache.set(2, "data2")
     cache.set(3, "data3")
 
